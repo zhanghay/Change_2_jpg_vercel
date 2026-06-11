@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import path from 'path';
 
 export async function POST(request) {
   try {
@@ -45,11 +44,4 @@ export async function POST(request) {
   }
 }
 
-// 设置较大的请求体限制
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb',
-    },
-  },
-};
+export const dynamic = 'force-dynamic';
